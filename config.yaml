@@ -53,15 +53,24 @@ bar:
   offset_x: "0"
   offset_y: "0"
   border_radius: "0"
-  components_left:
-    - type: "workspaces"
-      focused_workspace_background: "#ffffff33"
-      displayed_workspace_background: "#00000033"
-      default_workspace_background: "transparent"
   components_center:
-    - type: "window title"
+    - type: "workspaces"
+      focused_workspace_background: "#040d2b33"
+      displayed_workspace_background: "#3e4e8533"
+      default_workspace_background: "transparent"
+  components_left:
+    - type: "volume"
+      label_low: "🔈{volume_level}%"
+      label_medium: "🔉{volume_level}%"
+      label_high: "🔊{volume_level}%"
+      label_mute: "🔇{volume_level}%"
+      margin: "0 4px 0 0"
+      padding: "0 8px"
+    - type: "music"
+      label_not_playing: ""
+      label_paused: "{song_title} - {artist_name}"
+      label_playing: "{song_title} - {artist_name} ♪"
   components_right:
-    - type: "system tray"
     - type: "tiling direction"
       label_horizontal: "⮂"
       label_vertical: "⮁"
@@ -76,6 +85,13 @@ bar:
       # Documentation on formatting date/time string:
       # https://learn.microsoft.com/en-us/dotnet/standard/base-types/custom-date-and-time-format-strings
       time_formatting: "hh:mm tt  ddd MMM d"
+      margin: "0 4px 0 0"
+      padding: "0 8px"
+    - type: "battery"
+      label_draining: "{battery_level}% 🪫"
+      label_power_saver: "{battery_level}% 🔋"
+      label_charging: "{battery_level}% 🔋⚡"
+
 
 workspaces:
   - name: "1"
